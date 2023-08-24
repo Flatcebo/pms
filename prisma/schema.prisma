@@ -1,0 +1,110 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Department {
+  id      Int       @id @default(autoincrement())
+  name    String
+  Project Project[]
+  User    User[]
+}
+
+model Files {
+  id         Int      @id @default(autoincrement())
+  name       String
+  path       String
+  comment    String   @db.MediumText
+  workListId Int
+  WorkList   WorkList @relation(fields: [workListId], references: [id])
+
+  @@index([workListId], map: "Files_workListId_fkey")
+}
+
+model Project {
+  id           Int      @id @default(autoincrement())
+  name         String
+  startedAt    DateTime
+  finishedAt   DateTime
+  comment      String   @db.MediumText
+  departmentId Int
+  isAllDay     String   @default("N")
+
+  Department Department @relation(fields: [departmentId], references: [id])
+  Resource   Resource[]
+  WorkList   WorkList[]
+
+  @@index([departmentId], map: "Project_departmentId_fkey")
+}
+
+model Resource {
+  userId    Int
+  projectId Int
+  Project   Project @relation(fields: [projectId], references: [id])
+  User      User    @relation(fields: [userId], references: [id])
+
+  @@id([userId, projectId])
+  @@index([projectId], map: "Resource_projectId_fkey")
+}
+
+model Schedule {
+  id         Int      @id @default(autoincrement())
+  title      String
+  startedAt  DateTime
+  finishedAt DateTime
+  comment    String   @db.MediumText
+  userId     Int
+  User       User     @relation(fields: [userId], references: [id])
+
+  @@index([userId], map: "Schedule_userId_fkey")
+}
+
+model ToDoList {
+  id         Int       @id @default(autoincrement())
+  todayToDos String?   @db.MediumText
+  unToDos    String?   @db.MediumText
+  nextToDos  String?   @db.MediumText
+  createdAt  DateTime?
+  userId     Int
+  User       User      @relation(fields: [userId], references: [id])
+
+  @@index([userId], map: "ToDoList_userId_fkey")
+}
+
+model User {
+  id           Int        @id @default(autoincrement())
+  name         String
+  phone        String     @unique
+  email        String     @unique
+  password     String
+  createdAt    DateTime   @default(now())
+  departmentId Int
+  Department   Department @relation(fields: [departmentId], references: [id])
+  Resource     Resource[]
+  Schedule     Schedule[]
+  ToDoList     ToDoList[]
+  WorkList     WorkList[]
+
+  @@index([departmentId], map: "User_departmentId_fkey")
+}
+
+model WorkList {
+  id         Int      @id @default(autoincrement())
+  name       String
+  startedAt  DateTime
+  finishedAt DateTime
+  createdAt  DateTime
+  updatedAt  DateTime
+  userId     Int
+  projectId  Int
+  Project    Project  @relation(fields: [projectId], references: [id])
+  User       User     @relation(fields: [userId], references: [id])
+  Files      Files[]
+
+  @@index([projectId], map: "WorkList_projectId_fkey")
+  @@index([userId], map: "WorkList_userId_fkey")
+}

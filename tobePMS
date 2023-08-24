@@ -1,0 +1,59 @@
+NormalizeError: Requested and resolved page mismatch: /../public/undefined /public/undefined
+    at Object.normalizePagePath (/home/pms/www/tobe-pms/node_modules/next/dist/shared/lib/page-path/normalize-page-path.js:15:19)
+    at DevServer.hasPage (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:538:54)
+    at Router.checkPage (/home/pms/www/tobe-pms/node_modules/next/dist/server/router.js:48:35)
+    at Object.fn (/home/pms/www/tobe-pms/node_modules/next/dist/server/router.js:107:40)
+    at Router.execute (/home/pms/www/tobe-pms/node_modules/next/dist/server/router.js:247:48)
+    at async DevServer.run (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:346:29)
+    at async DevServer.run (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:708:20)
+    at async DevServer.handleRequest (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:284:20)
+    at async imageOptimizer (/home/pms/www/tobe-pms/node_modules/next/dist/server/image-optimizer.js:382:13)
+    at async /home/pms/www/tobe-pms/node_modules/next/dist/server/next-server.js:217:72
+NormalizeError: Requested and resolved page mismatch: /../public/undefined /public/undefined
+    at Object.normalizePagePath (/home/pms/www/tobe-pms/node_modules/next/dist/shared/lib/page-path/normalize-page-path.js:15:19)
+    at tryToNormalizePagePath (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/on-demand-entry-handler.js:171:40)
+    at findPagePathData (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/on-demand-entry-handler.js:187:32)
+    at Object.ensurePage (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/on-demand-entry-handler.js:377:44)
+    at HotReloader.ensurePage (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/hot-reloader.js:699:68)
+    at DevServer.findPageComponents (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:964:36)
+    at async DevServer.renderPageComponent (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:858:24)
+    at async DevServer.renderToResponse (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:886:32)
+    at async DevServer.pipe (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:368:25)
+    at async Object.fn (/home/pms/www/tobe-pms/node_modules/next/dist/server/next-server.js:727:21)
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+The requested resource isn't a valid image for /../public/undefined received text/html; charset=utf-8
+NormalizeError: Requested and resolved page mismatch: /../public/ProfileSample.png /public/ProfileSample.png
+    at Object.normalizePagePath (/home/pms/www/tobe-pms/node_modules/next/dist/shared/lib/page-path/normalize-page-path.js:15:19)
+    at DevServer.hasPage (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:538:54)
+    at DevServer._beforeCatchAllRender (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:573:28)
+    at async Object.fn (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:895:21)
+    at async Router.execute (/home/pms/www/tobe-pms/node_modules/next/dist/server/router.js:247:36)
+    at async DevServer.run (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:346:29)
+    at async DevServer.run (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:708:20)
+    at async DevServer.handleRequest (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:284:20)
+    at async imageOptimizer (/home/pms/www/tobe-pms/node_modules/next/dist/server/image-optimizer.js:382:13)
+    at async /home/pms/www/tobe-pms/node_modules/next/dist/server/next-server.js:217:72
+Failed to write image to cache ZvmLPjdl9GL8ZJR8ccMjampsLSVj9bCOGAvv0pPKE0A= [Error: EACCES: permission denied, open '/home/pms/www/tobe-pms/.next/cache/images/ZvmLPjdl9GL8ZJR8ccMjampsLSVj9bCOGAvv0pPKE0A=/60.1668477168810.l1GE5tUQ2XCfZgPevIBZ8F6lnxPADGUaXup787D1pTs=.webp'] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'open',
+  path: '/home/pms/www/tobe-pms/.next/cache/images/ZvmLPjdl9GL8ZJR8ccMjampsLSVj9bCOGAvv0pPKE0A=/60.1668477168810.l1GE5tUQ2XCfZgPevIBZ8F6lnxPADGUaXup787D1pTs=.webp'
+}
+NormalizeError: Requested and resolved page mismatch: /../public/ProfileSample.png /public/ProfileSample.png
+    at Object.normalizePagePath (/home/pms/www/tobe-pms/node_modules/next/dist/shared/lib/page-path/normalize-page-path.js:15:19)
+    at DevServer.hasPage (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:538:54)
+    at DevServer._beforeCatchAllRender (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:573:28)
+    at async Object.fn (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:895:21)
+    at async Router.execute (/home/pms/www/tobe-pms/node_modules/next/dist/server/router.js:247:36)
+    at async DevServer.run (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:346:29)
+    at async DevServer.run (/home/pms/www/tobe-pms/node_modules/next/dist/server/dev/next-dev-server.js:708:20)
+    at async DevServer.handleRequest (/home/pms/www/tobe-pms/node_modules/next/dist/server/base-server.js:284:20)
+    at async imageOptimizer (/home/pms/www/tobe-pms/node_modules/next/dist/server/image-optimizer.js:382:13)
+    at async /home/pms/www/tobe-pms/node_modules/next/dist/server/next-server.js:217:72
+Failed to write image to cache ZvmLPjdl9GL8ZJR8ccMjampsLSVj9bCOGAvv0pPKE0A= [Error: EACCES: permission denied, open '/home/pms/www/tobe-pms/.next/cache/images/ZvmLPjdl9GL8ZJR8ccMjampsLSVj9bCOGAvv0pPKE0A=/60.1668477182779.l1GE5tUQ2XCfZgPevIBZ8F6lnxPADGUaXup787D1pTs=.webp'] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'open',
+  path: '/home/pms/www/tobe-pms/.next/cache/images/ZvmLPjdl9GL8ZJR8ccMjampsLSVj9bCOGAvv0pPKE0A=/60.1668477182779.l1GE5tUQ2XCfZgPevIBZ8F6lnxPADGUaXup787D1pTs=.webp'
+}
